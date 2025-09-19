@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BreathSync | Yoga & Meditation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="BreathSync - A calm, interactive space for yoga and meditation." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="index.html">BreathSync</a>
+      <nav class="nav">
+        <a href="lessons.html">Lessons</a>
+        <a href="videos.html">Videos</a>
+        <a href="schedule.html">Schedule</a>
+        <a id="nav-login" href="login.html" class="btn ghost">Login</a>
+        <a id="nav-signup" href="signup.html" class="btn">Sign Up</a>
+        <button id="nav-logout" class="btn ghost hidden" type="button">Logout</button>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <canvas id="bgOrbs" aria-hidden="true"></canvas>
+      <div class="container hero-content">
+        <h1 class="title fade-in-up">Find Your Breath. Sync Your Flow.</h1>
+        <p class="subtitle fade-in-up delay-1">A calm, welcoming space for yoga and meditation—designed to move with you.</p>
+        <div class="cta fade-in-up delay-2">
+          <a href="lessons.html" class="btn">Explore Lessons</a>
+          <a href="schedule.html" class="btn ghost">Book a Session</a>
+        </div>
+        <blockquote id="quote" class="quote fade-in-up delay-3"></blockquote>
+      </div>
+      <a href="#features" class="scroll-indicator" aria-label="Scroll to content">⌄</a>
+    </section>
+
+    <section id="features" class="features section">
+      <div class="container grid-3">
+        <div class="card lift">
+          <h3>Interactive Lessons</h3>
+          <p>Dive into beginner to advanced yoga and guided meditations.</p>
+          <a href="lessons.html" class="link">Browse Lessons →</a>
+        </div>
+        <div class="card lift">
+          <h3>Video Library</h3>
+          <p>Curated flows and tranquil meditations in a responsive playlist.</p>
+          <a href="videos.html" class="link">Watch Videos →</a>
+        </div>
+        <div class="card lift">
+          <h3>Book Your Practice</h3>
+          <p>Pick a class, choose a time, and sync your breath—effortlessly.</p>
+          <a href="schedule.html" class="link">View Schedule →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <h2 class="section-title">What Practitioners Say</h2>
+        <div class="marquee" id="marquee">
+          <div class="marquee-track">
+            <span>“Each breath a step, each step a journey.”</span>
+            <span>“Stillness speaks when the mind listens.”</span>
+            <span>“Move gently, arrive fully.”</span>
+            <span>“Strength with softness, effort with ease.”</span>
+            <span>“Peace is the practice.”</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> BreathSync</span>
+      <nav class="footer-nav">
+        <a href="index.html#features">Features</a>
+        <a href="videos.html">Videos</a>
+        <a href="schedule.html">Schedule</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+

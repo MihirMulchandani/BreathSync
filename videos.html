@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos • BreathSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="index.html">BreathSync</a>
+      <nav class="nav">
+        <a href="lessons.html">Lessons</a>
+        <a href="videos.html">Videos</a>
+        <a href="schedule.html">Schedule</a>
+        <a id="nav-login" href="login.html" class="btn ghost">Login</a>
+        <a id="nav-signup" href="signup.html" class="btn">Sign Up</a>
+        <button id="nav-logout" class="btn ghost hidden" type="button">Logout</button>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Video Library</h1>
+      <p class="muted" style="text-align:center;margin-top:-6px;">Curated flows & meditations to support your daily practice.</p>
+
+      <div class="video-layout" style="margin-top:20px;">
+        <!-- Main video -->
+        <div class="video-player">
+          <iframe id="mainVideo" src="https://www.youtube.com/embed/v7AYKMP6rOE" title="Yoga For Complete Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+          <div class="playlist-item active" data-video="v7AYKMP6rOE">
+            <img class="playlist-thumb" src="https://img.youtube.com/vi/v7AYKMP6rOE/hqdefault.jpg" alt="">
+            <div>
+              <div class="playlist-title">Yoga For Complete Beginners</div>
+              <div class="playlist-meta">20 min • Yoga With Adriene</div>
+            </div>
+          </div>
+          <div class="playlist-item" data-video="4pKly2JojMw">
+            <img class="playlist-thumb" src="https://img.youtube.com/vi/4pKly2JojMw/hqdefault.jpg" alt="">
+            <div>
+              <div class="playlist-title">Guided Meditation for Anxiety</div>
+              <div class="playlist-meta">10 min • The Mindful Movement</div>
+            </div>
+          </div>
+          <div class="playlist-item" data-video="sTANio_2E0Q">
+            <img class="playlist-thumb" src="https://img.youtube.com/vi/sTANio_2E0Q/hqdefault.jpg" alt="">
+            <div>
+              <div class="playlist-title">Morning Yoga Stretch</div>
+              <div class="playlist-meta">15 min • Yoga With Kassandra</div>
+            </div>
+          </div>
+          <div class="playlist-item" data-video="nmFUDkj1Aq0">
+            <img class="playlist-thumb" src="https://img.youtube.com/vi/nmFUDkj1Aq0/hqdefault.jpg" alt="">
+            <div>
+              <div class="playlist-title">Box Breathing Tutorial</div>
+              <div class="playlist-meta">5 min • Breathwork Guide</div>
+            </div>
+          </div>
+          <div class="playlist-item" data-video="q5m6tMjcF8k">
+            <img class="playlist-thumb" src="https://img.youtube.com/vi/q5m6tMjcF8k/hqdefault.jpg" alt="">
+            <div>
+              <div class="playlist-title">10-Minute Yoga For Focus</div>
+              <div class="playlist-meta">10 min • Yoga With Adriene</div>
+            </div>
+          </div>
+          <div class="playlist-item" data-video="Np0jGp6442A">
+            <img class="playlist-thumb" src="https://img.youtube.com/vi/Np0jGp6442A/hqdefault.jpg" alt="">
+            <div>
+              <div class="playlist-title">Deep Relaxation Meditation</div>
+              <div class="playlist-meta">12 min • Great Meditation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:18px;">
+        Tip: Click a video from the playlist to play it instantly in the main player.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> BreathSync</span>
+      <nav class="footer-nav">
+        <a href="index.html#features">Features</a>
+        <a href="schedule.html">Schedule</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Switch video when clicking playlist
+    document.querySelectorAll(".playlist-item").forEach(item => {
+      item.addEventListener("click", () => {
+        document.querySelectorAll(".playlist-item").forEach(el => el.classList.remove("active"));
+        item.classList.add("active");
+        const videoId = item.getAttribute("data-video");
+        document.getElementById("mainVideo").src = "https://www.youtube.com/embed/" + videoId;
+      });
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

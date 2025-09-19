@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login • BreathSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="index.html">BreathSync</a>
+      <nav class="nav">
+        <a href="lessons.html">Lessons</a>
+        <a href="videos.html">Videos</a>
+        <a href="schedule.html">Schedule</a>
+        <a id="nav-login" href="login.html" class="btn ghost">Login</a>
+        <a id="nav-signup" href="signup.html" class="btn">Sign Up</a>
+        <button id="nav-logout" class="btn ghost hidden" type="button">Logout</button>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="auth-card">
+        <h1 class="auth-title">Welcome Back</h1>
+        <form id="loginForm">
+          <div class="field">
+            <label for="liEmail">Email</label>
+            <input id="liEmail" type="email" required>
+          </div>
+          <div class="field">
+            <label for="liPassword">Password</label>
+            <input id="liPassword" type="password" required>
+          </div>
+          <div class="form-actions">
+            <button class="btn" type="submit">Login</button>
+            <a class="link" href="signup.html">Create account</a>
+          </div>
+          <div id="loginError" class="error"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> BreathSync</span>
+      <nav class="footer-nav">
+        <a href="lessons.html">Lessons</a>
+        <a href="videos.html">Videos</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
